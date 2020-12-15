@@ -6,7 +6,8 @@ set -e
 : ${WPENGINE_SSH_KEY_PRIVATE?Required secret not set.}
 : ${WPENGINE_SSH_KEY_PUBLIC?Required secret not set.}
 
-SSH_PATH="$HOME/.ssh"
+#SSH_PATH="$HOME/.ssh"
+SSH_PATH="/.ssh"
 WPENGINE_HOST="git.wpengine.com"
 KNOWN_HOSTS_PATH="$SSH_PATH/known_hosts"
 WPENGINE_SSH_KEY_PRIVATE_PATH="$SSH_PATH/wpengine_key"
