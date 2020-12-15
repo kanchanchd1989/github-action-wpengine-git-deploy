@@ -1,5 +1,5 @@
 #!/bin/sh -l
-
+set -x
 set -e
 
 : ${WPENGINE_ENVIRONMENT_NAME?Required environment name variable not set.}
@@ -22,6 +22,8 @@ ssh-keyscan -t rsa "$WPENGINE_HOST" >> "$KNOWN_HOSTS_PATH"
 
 echo "$WPENGINE_SSH_KEY_PRIVATE" > "$WPENGINE_SSH_KEY_PRIVATE_PATH"
 echo "$WPENGINE_SSH_KEY_PUBLIC" > "$WPENGINE_SSH_KEY_PUBLIC_PATH"
+
+echo "111111"
 
 chmod 700 "$SSH_PATH"
 chmod 644 "$KNOWN_HOSTS_PATH"
